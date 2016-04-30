@@ -18,7 +18,7 @@ awk '
 ' $1 > tmp-stl
 
 echo "
-  splot \"tmp-stl\" with linespoints linecolor \"blue\" linewidth 2
+  splot \"tmp-stl\" with lines linecolor \"blue\" linewidth 1
   pause -1 \"Press any key to end the program\"
 " > tmp-gnuplot-code
 

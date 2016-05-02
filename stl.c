@@ -4,6 +4,8 @@
 // as output.
 
 #include <stdio.h>
+#include <string.h>
+#include <ctype.h>
 
 // Define a structure for storing the information associated with each triangular
 // facet of the STL file. This is a 50 byte structure.

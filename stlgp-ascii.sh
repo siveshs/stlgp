@@ -17,8 +17,18 @@ awk '
 /endloop/ {print ""}
 ' $1 > tmp-stl
 
+echo "Parsing of ASCII STL file complete"
+echo
+echo "Running GNUPlot"
+echo
+
 echo "
-  splot \"tmp-stl\" with lines linecolor \"blue\" linewidth 1
+  set view equal xyz
+  set xyplane at 0
+  set xlabel \"X Axis\"
+  set ylabel \"Y Axis\"
+  set zlabel \"Z Axis\"
+  splot \"tmp-stl\" with lines 
   pause -1 \"Press any key to end the program\"
 " > tmp-gnuplot-code
 
